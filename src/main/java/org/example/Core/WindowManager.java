@@ -11,7 +11,7 @@ import org.lwjgl.system.MemoryUtil;
 public class WindowManager {
 //Memorize or reuse
 
-    //variables
+    //first declare variables
     public static final float FOV = (float) Math.toRadians(60);
     public static final float Z_NEAR = 0.01f;
     public static final float Z_FAR = 1000f;
@@ -23,6 +23,7 @@ public class WindowManager {
 
     private final Matrix4f projectionMatrix;
 
+    //then declare the window manager
     public WindowManager(String title, int width, int height, boolean vSync) {
         //constructor
         this.title = title;
@@ -32,6 +33,7 @@ public class WindowManager {
         projectionMatrix = new Matrix4f();
     }
 
+    //initialize
     public void init(){
         //error callback
         GLFWErrorCallback.createPrint(System.err).set();
