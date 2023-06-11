@@ -7,10 +7,11 @@ import org.lwjgl.Version;
 
 public class Main {
     private static WindowManager window;
-    private static EngineManager engine;
+    private static TestGame game;
     public static void main(String[] args) {
          window = new WindowManager(Consts.TITLE, 0, 0, false);
-         engine = new EngineManager();
+         game = new TestGame();
+         EngineManager engine = new EngineManager();
 
         try{
             engine.start();
@@ -21,5 +22,9 @@ public class Main {
 
     public static WindowManager getWindow() {
         return window;
+    }
+
+    public static TestGame getGame() {
+        return game;
     }
 }

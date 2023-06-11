@@ -109,6 +109,7 @@ public class WindowManager {
     }
 
     public boolean windowShouldClose(){
+
         return GLFW.glfwWindowShouldClose(window);
     }
 
